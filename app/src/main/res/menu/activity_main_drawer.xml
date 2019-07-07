@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_patient"
+            android:icon="@drawable/ic_patient"
+            android:title="Novo Paciente" />
+        <item
+            android:id="@+id/nav_appointment"
+            android:icon="@drawable/ic_appointment"
+            android:title="Agenda" />
+        <item
+            android:id="@+id/nav_new_appointment"
+            android:icon="@drawable/ic_new_appointment"
+            android:title="Nova Consulta" />
+        <item
+            android:id="@+id/nav_agreement"
+            android:icon="@drawable/ic_agreement"
+            android:title="Convenio" />
+        <item
+            android:id="@+id/nav_diagnostic"
+            android:icon="@drawable/ic_diagnostic"
+            android:title="Diagnostico" />
+        <item
+            android:id="@+id/nav_procedure"
+            android:icon="@drawable/ic_procedure"
+            android:title="Procedimento" />
+        <item
+            android:id="@+id/nav_cashier"
+            android:icon="@drawable/ic_cashier"
+            android:title="Fluxo" />
+        <item
+            android:id="@+id/nav_bills_to_pay"
+            android:icon="@drawable/ic_money"
+            android:title="Contas a Pagar" />
+        <item
+            android:id="@+id/nav_bills_to_receive"
+            android:icon="@drawable/ic_money"
+            android:title="Contas a Receber" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Sair" />
+    </group>
+
+
+</menu>
