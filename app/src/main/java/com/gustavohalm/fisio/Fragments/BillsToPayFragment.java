@@ -4,7 +4,6 @@ package com.gustavohalm.fisio.Fragments;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.SharedElementCallback;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,7 +59,7 @@ public class BillsToPayFragment extends Fragment {
         editYear = view.findViewById(R.id.editBillsToPayYear);
         btnAdd = view.findViewById(R.id.btnPayAdd);
         spinDay = view.findViewById(R.id.spinBillsToPayDay);
-        spinMonth = view.findViewById(R.id.spinBillsToPayMonth);
+        spinMonth = view.findViewById(R.id.spinCashierMonth);
 
         adapterDays = ArrayAdapter.createFromResource(getContext(),
                 R.array.spinner_days, android.R.layout.simple_spinner_item);

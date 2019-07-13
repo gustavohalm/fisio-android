@@ -37,6 +37,7 @@ public class NewAppointment extends Fragment {
     private Spinner spnMonth;
     private EditText editYear;
     private EditText editTime;
+    private EditText editValue;
     private Button schedule;
     private Button selectPatient;
     ArrayAdapter<CharSequence> adapterDays;
@@ -47,6 +48,7 @@ public class NewAppointment extends Fragment {
     private String time;
     private String token;
     private String value;
+    private String status;
     private SharedPreferences preferences;
     private SharedPreferences prefs;
     private int patient_id;
@@ -64,6 +66,7 @@ public class NewAppointment extends Fragment {
         spnMonth = view.findViewById(R.id.spinNewAppointmentMonth);
         editYear = view.findViewById(R.id.editNewAppointmentYear);
         editTime = view.findViewById(R.id.editNewAppointmentTime);
+        editValue = view.findViewById(R.id.editNewAppointmentValue);
         schedule = view.findViewById(R.id.btnNewAppointment);
         selectPatient = view.findViewById(R.id.btnNewAppointmentSelectPatient);
         adapterDays = ArrayAdapter.createFromResource(getContext(),
@@ -101,6 +104,7 @@ public class NewAppointment extends Fragment {
                 String year = editYear.getText().toString();
                 String day = (String) spnDay.getSelectedItem();
                 String month = (String) spnMonth.getSelectedItem();
+                value = editValue.getText().toString();
                 if ( Integer.valueOf(month) <= 9 )
                     month = "0" + month;
                 if( Integer.valueOf(day) <=9 )
@@ -120,11 +124,12 @@ public class NewAppointment extends Fragment {
 
     public void makeRequest()
     {
-        value = "160.90";
+        status = "Pendente";
         AppointmentNew appointment = new AppointmentNew();
         appointment.setDay(date);
         appointment.setPatient(patient_id);
         appointment.setTime(time);
+        appointment.setStatus(status);
         appointment.setValue(Double.valueOf(value));
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://fisio.gustavohalm.com/api/v0/")

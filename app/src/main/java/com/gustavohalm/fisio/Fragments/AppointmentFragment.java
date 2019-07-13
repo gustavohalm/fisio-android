@@ -136,7 +136,7 @@ public class AppointmentFragment extends Fragment {
     {
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this.getActivity());
         rcvAppointments.setLayoutManager(manager);
-        adapterAppointment = new AdapterAppointment(appointmentList);
+        adapterAppointment = new AdapterAppointment(appointmentList, getContext());
         rcvAppointments.setHasFixedSize(true);
         rcvAppointments.setLayoutManager(manager);
         rcvAppointments.setAdapter(adapterAppointment);

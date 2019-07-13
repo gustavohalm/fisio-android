@@ -18,17 +18,13 @@
             android:icon="@drawable/ic_new_appointment"
             android:title="Nova Consulta" />
         <item
-            android:id="@+id/nav_agreement"
-            android:icon="@drawable/ic_agreement"
-            android:title="Convenio" />
+            android:id="@+id/nav_patient_detail"
+            android:icon="@drawable/ic_patient_detail"
+            android:title="Paciente" />
         <item
-            android:id="@+id/nav_diagnostic"
-            android:icon="@drawable/ic_diagnostic"
-            android:title="Diagnostico" />
-        <item
-            android:id="@+id/nav_procedure"
-            android:icon="@drawable/ic_procedure"
-            android:title="Procedimento" />
+            android:id="@+id/nav_contracts"
+            android:icon="@drawable/ic_receipt_black_24dp"
+            android:title="Contratos" />
         <item
             android:id="@+id/nav_cashier"
             android:icon="@drawable/ic_cashier"

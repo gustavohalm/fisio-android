@@ -108,6 +108,23 @@
             android:inputType="time"
             android:text="10:00" />
 
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Valor:" />
+
+        <EditText
+            android:id="@+id/editNewAppointmentValue"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorEdit"
+            android:ems="10"
+            android:inputType="numberDecimal|time"
+            android:text="150.00" />
+
         <Button
             android:id="@+id/btnNewAppointment"
             android:layout_width="match_parent"

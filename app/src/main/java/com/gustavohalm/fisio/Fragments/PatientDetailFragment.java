@@ -1,7 +1,6 @@
 package com.gustavohalm.fisio.Fragments;
 
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,13 +12,10 @@ import com.gustavohalm.fisio.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DiagnosticFragment extends Fragment {
-    private int patientId;
-    private SharedPreferences prefsToken;
-    private SharedPreferences prefsPatient;
+public class PatientDetailFragment extends Fragment {
 
 
-    public DiagnosticFragment() {
+    public PatientDetailFragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +24,11 @@ public class DiagnosticFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_diagnostic, container, false);
+        View view = inflater.inflate(R.layout.fragment_patient_detail, container, false);
+
+
+
+        return view;
     }
 
 }

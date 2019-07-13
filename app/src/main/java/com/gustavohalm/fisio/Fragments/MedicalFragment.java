@@ -12,10 +12,10 @@ import com.gustavohalm.fisio.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProcedureFragment extends Fragment {
+public class MedicalFragment extends Fragment {
 
 
-    public ProcedureFragment() {
+    public MedicalFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class ProcedureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_procedure, container, false);
+        return inflater.inflate(R.layout.fragment_medical, container, false);
     }
 
 }

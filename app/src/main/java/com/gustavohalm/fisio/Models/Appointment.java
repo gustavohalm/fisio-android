@@ -4,9 +4,18 @@ public class Appointment {
     private Patient patient;
     private String day;
     private String time;
+    private String status;
     private Double value;
     private int fisio;
     private int id;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public String getDay() {
         return day;

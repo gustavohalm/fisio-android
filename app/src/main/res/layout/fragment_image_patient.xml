@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.ImagePatientFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="Image Patient Upload Frag" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:text="Adicione imagem ao cadastro do Paciente"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imgPatientView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorEdit" />
+
+        <Button
+            android:id="@+id/btnImagePatientUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorEdit"
+            android:text="Escolher da Galeria" />
+
+        <Button
+            android:id="@+id/btnImagePatientTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorEdit"
+            android:text="Tirar Foto" />
+
+        <Button
+            android:id="@+id/btnAddPatientImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Adicionar Imagem"
+            android:textColor="?attr/colorBackgroundFloating" />
+    </LinearLayout>
 
 </FrameLayout>

@@ -61,6 +61,7 @@ public class PatientFragment extends Fragment{
     private String token;
     private Button btn;
     private SharedPreferences prefs;
+    private SharedPreferences preferences;
     ArrayAdapter<CharSequence> adapterDays;
     ArrayAdapter<CharSequence> adapterMonths;
     //endregion
@@ -160,6 +161,10 @@ public class PatientFragment extends Fragment{
                 patient = response.body();
                 Toast.makeText(getContext(), "Paciente cadastrado! Adicione alguma imagem. ", Toast.LENGTH_SHORT).show();
 
+                preferences = getContext().getSharedPreferences("patient_created", getContext().MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("the_patient", patient.getId());
+                editor.apply();
                 ((MainActivity)getActivity()).openFragment();
             }
             else
