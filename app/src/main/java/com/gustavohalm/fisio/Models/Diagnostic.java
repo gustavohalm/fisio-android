@@ -15,7 +15,13 @@ public class Diagnostic{
     private String evolution;
     private String taining;
     private String physic_exam;
-    private String scale;
+    private String  hma;
+    private String  hmp;
+    private String  hmf;
+    private String  qp;
+    private String  medication;
+    private String fowarding;
+    private String functional;
     private String observation;
 
     public String getAnamnese() {
@@ -50,12 +56,60 @@ public class Diagnostic{
         this.physic_exam = physic_exam;
     }
 
-    public String getScale() {
-        return scale;
+    public String getHma() {
+        return hma;
     }
 
-    public void setScale(String scale) {
-        this.scale = scale;
+    public void setHma(String hma) {
+        this.hma = hma;
+    }
+
+    public String getHmp() {
+        return hmp;
+    }
+
+    public void setHmp(String hmp) {
+        this.hmp = hmp;
+    }
+
+    public String getHmf() {
+        return hmf;
+    }
+
+    public void setHmf(String hmf) {
+        this.hmf = hmf;
+    }
+
+    public String getQp() {
+        return qp;
+    }
+
+    public void setQp(String qp) {
+        this.qp = qp;
+    }
+
+    public String getMedication() {
+        return medication;
+    }
+
+    public void setMedication(String medication) {
+        this.medication = medication;
+    }
+
+    public String getFowarding() {
+        return fowarding;
+    }
+
+    public void setFowarding(String fowarding) {
+        this.fowarding = fowarding;
+    }
+
+    public String getFunctional() {
+        return functional;
+    }
+
+    public void setFunctional(String functional) {
+        this.functional = functional;
     }
 
     public String getObservation() {
