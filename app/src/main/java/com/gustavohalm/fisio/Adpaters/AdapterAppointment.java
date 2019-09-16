@@ -65,6 +65,11 @@ public class AdapterAppointment extends RecyclerView.Adapter<AdapterAppointment.
         myViewHolder.txtHour.setText(hour);
         for (int j = 0; j < appointmentList.size(); j++) {
             if ( hourtest.equals( appointmentList.get(j).getTime())  ) {
+                hoursList.get(i).setId( appointmentList.get(j).getId() );
+                hoursList.get(i).setTime( appointmentList.get(j).getTime());
+                hoursList.get(i).setDay( appointmentList.get(j).getDay());
+                hoursList.get(i).setValue( appointmentList.get(j).getValue() );
+                hoursList.get(i).setStatus( appointmentList.get(j).getStatus() );
                 hoursList.get(i).setPatient( appointmentList.get(j).getPatient() );
                 myViewHolder.txtPatient.setText(appointmentList.get(j).getPatient().getName());
                 Log.v("api_log", appointmentList.get(j).getTime() + "deu");
@@ -88,7 +93,7 @@ public class AdapterAppointment extends RecyclerView.Adapter<AdapterAppointment.
                     editor.putString("appointment_day", hoursList.get(i).getDay());
                     editor.putString("appointment_status", hoursList.get(i).getStatus());
                     editor.putString("appointment_value",  String.valueOf( hoursList.get(i).getValue() ) );
-
+                    Log.v("debugMode", "id>:" + hoursList.get(i).getId());
                     editor.apply();
 
                     MainActivity activity = (MainActivity) v.getContext();

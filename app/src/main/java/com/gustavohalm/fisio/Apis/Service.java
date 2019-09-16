@@ -4,6 +4,7 @@ import com.gustavohalm.fisio.Models.Appointment;
 import com.gustavohalm.fisio.Models.AppointmentNew;
 import com.gustavohalm.fisio.Models.BillsToPay;
 import com.gustavohalm.fisio.Models.BillsToReceive;
+import com.gustavohalm.fisio.Models.Diagnostic;
 import com.gustavohalm.fisio.Models.ImagePatient;
 import com.gustavohalm.fisio.Models.Patient;
 import com.gustavohalm.fisio.Models.Token;
@@ -20,6 +21,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -80,7 +82,25 @@ public interface Service {
     @POST("appointment/")
     Call<AppointmentNew> createAppointment(@Header("Authorization") String token, @Body AppointmentNew appointment);
 
+    @PUT("appointment/{id}/")
+    Call<AppointmentNew> editAppointment(@Header("Authorization") String token,@Path("id") int id, @Body AppointmentNew appointment );
+
     //endregion
 
+
+    //region Diagnostic ENDPOINTS
+
+    @GET("diagnostic/")
+    Call< List<Diagnostic> > getPatientDiagnostics(@Header("Authorization") String token, @Query("patient") int patientId );
+
+    @POST("diagnostic/")
+    Call<Diagnostic> createDiagnostic(@Header("Authorization") String token, @Body Diagnostic diagnostic );
+
+    @Multipart
+    @POST("image-diagnostic/")
+    Call<ResponseBody> uploadImageDiagnostic(@Header("Authorization") String token, @Part("diagnostic") RequestBody patient, @Part("description") RequestBody description, @Part MultipartBody.Part url);
+
+
+    //endregion
 
 }

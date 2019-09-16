@@ -60,5 +60,10 @@
         <item>12</item>
     </string-array>
 
+    <string-array name="spinner_status">
+        <item>Pendente</item>
+        <item>Faltou</item>
+        <item>Realizado</item>
+    </string-array>
 </resources>
 

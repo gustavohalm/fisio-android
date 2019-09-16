@@ -48,7 +48,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editBillsToPayYear"
+                android:id="@+id/editCashierYear"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="2dp"

@@ -24,6 +24,7 @@ import com.gustavohalm.fisio.Fragments.CashierFragment;
 import com.gustavohalm.fisio.Fragments.ContractsFragment;
 import com.gustavohalm.fisio.Fragments.DiagnosticFragment;
 import com.gustavohalm.fisio.Fragments.DialogPatientFragment;
+import com.gustavohalm.fisio.Fragments.ImageDiagnosticFragment;
 import com.gustavohalm.fisio.Fragments.ImagePatientFragment;
 import com.gustavohalm.fisio.Fragments.NewAppointment;
 import com.gustavohalm.fisio.Fragments.PatientFragment;
@@ -198,6 +199,16 @@ public class MainActivity extends AppCompatActivity
         DiagnosticFragment diagnosticFragment = new DiagnosticFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.FrameLayout, diagnosticFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+
+    public void openImageDiagnosticFragment()
+    {
+        ImageDiagnosticFragment imageDiagnosticFragment = new ImageDiagnosticFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.add(R.id.FrameLayout, imageDiagnosticFragment);
         transaction.addToBackStack(null);
         transaction.commit();
     }

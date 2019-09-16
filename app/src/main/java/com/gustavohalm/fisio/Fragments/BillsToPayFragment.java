@@ -56,7 +56,7 @@ public class BillsToPayFragment extends Fragment {
 
         editValue = view.findViewById(R.id.editPayValue);
         editDescription = view.findViewById(R.id.editPayDescription);
-        editYear = view.findViewById(R.id.editBillsToPayYear);
+        editYear = view.findViewById(R.id.editCashierYear);
         btnAdd = view.findViewById(R.id.btnPayAdd);
         spinDay = view.findViewById(R.id.spinBillsToPayDay);
         spinMonth = view.findViewById(R.id.spinCashierMonth);
