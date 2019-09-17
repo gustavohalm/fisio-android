@@ -5,16 +5,73 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.PatientDetailFragment">
 
-    <Button
-        android:id="@+id/btnDetailPatient"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|top|center_vertical"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="@color/colorPrimary"
-        android:text="Paciente"
-        android:textColor="@color/colorEdit"
-        android:textSize="28sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnDetailPatient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top|center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Paciente"
+            android:textColor="@color/colorEdit"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/txtPatientDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Nome do Paciente " />
+
+        <TextView
+            android:id="@+id/txtPatientDetailEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@android:string/defaultVoiceMailAlphaTag" />
+
+        <TextView
+            android:id="@+id/txtPatientDetailPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Celular" />
+
+        <TextView
+            android:id="@+id/txtPatientDetailBorn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nascimento" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcvPatientDiagnostics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
 </FrameLayout>

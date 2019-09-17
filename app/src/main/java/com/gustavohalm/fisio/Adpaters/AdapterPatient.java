@@ -14,6 +14,7 @@ import com.gustavohalm.fisio.Activities.MainActivity;
 import com.gustavohalm.fisio.Fragments.BillsToPayFragment;
 import com.gustavohalm.fisio.Fragments.BillsToReceiveFragment;
 import com.gustavohalm.fisio.Fragments.NewAppointment;
+import com.gustavohalm.fisio.Fragments.PatientDetailFragment;
 import com.gustavohalm.fisio.Models.Patient;
 import com.gustavohalm.fisio.R;
 
@@ -56,6 +57,11 @@ public class AdapterPatient extends RecyclerView.Adapter<AdapterPatient.MyViewHo
                     {
                         BillsToReceiveFragment billsToReceiveFragment = new BillsToReceiveFragment();
                         activity.getSupportFragmentManager().beginTransaction().replace(R.id.FrameLayout, billsToReceiveFragment).addToBackStack(null).commit();
+                    }
+                    else if (previous_page.equals("diagnostic_detail"))
+                    {
+                        PatientDetailFragment patientDetailFragment = new PatientDetailFragment();
+                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.FrameLayout, patientDetailFragment).addToBackStack(null).commit();
                     }
                 }
         });
